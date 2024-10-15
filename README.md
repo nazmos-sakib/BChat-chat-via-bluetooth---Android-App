@@ -6,9 +6,9 @@ Welcome to the BChat-chat-via-bluetooth---Android-App wiki!
 ## Bluetooth Chat App
 A Bluetooth-based Android application developed in Kotlin that allows two mobile devices to connect, pair, and exchange messages. This project demonstrates my expertise in Android development, utilizing the Android Bluetooth Adapter for device discovery, pairing, and communication.
 
-## Badges
+![kotlin]  ![apiSvg]
 
-### Table of Contents
+## Table of Contents
 
 * [Overview](#bchat)
 * [Features](#features)
@@ -19,7 +19,7 @@ A Bluetooth-based Android application developed in Kotlin that allows two mobile
 * [Tech Stack](#tech-stack)
 * [Contributing](#contributing)
 
-### Features
+## Features
 
 Device Scanning: Search for nearby Bluetooth devices.
 Pre-Paired Devices: View and connect to devices that are already paired.
@@ -27,12 +27,12 @@ Real-Time Messaging: Send and receive messages between two connected devices.
 Kotlin Coroutines: Used for asynchronous operations during device discovery and connection.
 Bluetooth Adapter Integration: Utilizes the Android Bluetooth Adapter API for communication.
 
-### Demo
+## Demo
 <div style="display: flex; align: center;">
     <img  src="app/src/main/res/raw/ss_demo.gif" alt="Image 1" style="width: 100%; border: 2px solid #ccc; border-radius: 8px; align: center;">
 </div>
 
-### Setup
+## Setup
 
 To run this project, follow these steps:
 
@@ -49,7 +49,7 @@ To run this project, follow these steps:
    * Ensure Bluetooth is enabled on both devices.
 
 
-### How It Works
+## How It Works
 
 1. Bluetooth Setup:
    * The app uses the Android BluetoothAdapter class to interact with the Bluetooth hardware.
@@ -91,7 +91,7 @@ xml
    * The app handles common Bluetooth connection errors, such as timeouts and failed pairing.
 
 
-### Design Patterns & Architecture
+## Design Patterns & Architecture
 
 ### MVVM (Model-View-ViewModel)
 
@@ -121,7 +121,7 @@ The project is built following Clean Architecture principles, which helps to ens
 
 
 
-### Tech Stack
+## Tech Stack
 
    * **MVVM** Architecture: Used for separating concerns between the UI and business logic.
    * **Kotlin**: Modern programming language for Android development.
@@ -131,6 +131,12 @@ The project is built following Clean Architecture principles, which helps to ens
    * **Jetpack compose**: UI is implement with jetpack composer.
    * **Dagger-Hilt**: provides a standard way for dependency injection into the application.
 
-### Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue if you find any bugs or have feature requests.
+
+
+
+
+[apiSvg]: https://img.shields.io/badge/API-26+-brightgreen.svg
+[kotlin]: https://img.shields.io/badge/Kotlin-purple
