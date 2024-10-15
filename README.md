@@ -38,13 +38,15 @@ To run this project, follow these steps:
 
 1. Clone the repository:
  
-   ```https://github.com/nazmos-sakib/BChat-chat-via-bluetooth---Android-App/```
+   ```bash
+   https://github.com/nazmos-sakib/BChat-chat-via-bluetooth---Android-App/
+   ```
 
-2. Open the project in Android Studio.
-3. Build the project:
+3. Open the project in Android Studio.
+4. Build the project:
    * Make sure the required SDK versions are installed.
    * The app targets Android SDK 34 and uses Kotlin 1.5.1. and Java version 17
-4. Run the app on two devices:
+5. Run the app on two devices:
    * Install the app on two Android devices.
    * Ensure Bluetooth is enabled on both devices.
 
@@ -56,7 +58,7 @@ To run this project, follow these steps:
    * Permissions for Bluetooth and Bluetooth Admin are required in the AndroidManifest.xml:
 xml
 
-     ```
+     ```XML
      <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
      <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" tools:targetApi="s" />
      <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
@@ -65,25 +67,25 @@ xml
 2. Device Discovery:
    * The app scans for nearby Bluetooth devices using:
 
-     ```
+     ```kotlin
         val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
         bluetoothAdapter?.startDiscovery()
      ```
    * Results are filtered and shown in a LazyColumn.
 3. Pairing & Connecting:
    * For pre-paired devices, the app retrieves the list via:
-     ```
+     ```kotlin
      val pairedDevices: Set<BluetoothDevice>? = bluetoothAdapter?.bondedDevices
      ```
    * For new devices, the app initiates pairing and listens for connection events.
 4. Message Transfer:
    * The app creates a BluetoothSocket for communication between devices and transfers data via Input/Output streams:
-     ```
+     ```kotlin
       val socket = device.createRfcommSocketToServiceRecord(uuid)
       socket.connect()
      ```
    * Messages are serialized into bytes and sent over the connection:
-     ```
+     ```kotlin
      val outputStream: OutputStream = socket.outputStream
      outputStream.write(messageBytes)
      ```
